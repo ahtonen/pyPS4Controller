@@ -1,15 +1,20 @@
 # pyPS4Controller
-[![PyPI version shields.io](https://img.shields.io/pypi/v/pyPS4Controller.svg)](https://pypi.python.org/pypi/pyPS4Controller/) 
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/pyPS4Controller.svg)](https://pypi.python.org/pypi/pyPS4Controller/)
-[![Downloads](https://pepy.tech/badge/pyPS4Controller)](https://pepy.tech/project/pyPS4Controller)
-##
 
 ![PS4 Controller](https://github.com/ArturSpirin/pyPS4Controller/blob/master/assets/ds4.jpg)
 
 pyPS4Controller is a light module (less than 30KB) without any dependencies designed to provide hooks for PS4 Controller events on Linux.
 
+This custom version is based on Artur Spirin's version 1.2.5. Some mappings are fixed to work with Jetson Nano and controller module's prints are replaced with Python's logging module. This way debug and information messages can be directed in a more smart way.
+
 ## Installation
-`sudo pip install pyPS4Controller`
+
+You need to build the wheel by yourself since I haven't pushed that to any repo.
+```
+python3 setup.py bdist_wheel
+check-wheel-contents dist
+sudo -H pip3 install dist/<wheel name>
+```
+
 
 ## Usage
 
