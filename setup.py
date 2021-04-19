@@ -7,13 +7,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyPS4Controller",
-    version="1.2.5",
-    author="Artur Spirin",
-    author_email="as.no.replies@gmail.com",
+    version="1.2.6",
+    author="Pekka Ahtonen",
+    author_email="noreplies@gmail.com",
     description="Simple hooks for PS4 controller",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ArturSpirin/pyPS4Controller",
+    url="https://github.com/ahtonen/pyPS4Controller",
     packages=setuptools.find_packages(),
     classifiers=[
         "Intended Audience :: Developers",
@@ -27,14 +27,14 @@ setuptools.setup(
         "Operating System :: POSIX :: Linux",
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Utilities"
+        "Topic :: Utilities",
     ],
     keywords=["playstation", "ps4", "controller", "binding", "hooks"],
     entry_points={
-          'console_scripts': [
-              'py2ps4c = pyPS4Controller.__main__:main'
-              if sys.version_info[0] < 3 else
-              'py3ps4c = pyPS4Controller.__main__:main',
-          ]
+        "console_scripts": [
+            "py2ps4c = pyPS4Controller.__main__:main"
+            if sys.version_info[0] < 3
+            else "py3ps4c = pyPS4Controller.__main__:main",
+        ]
     },
 )
